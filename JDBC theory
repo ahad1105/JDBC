@@ -1,0 +1,19 @@
+Jdbc - java database connectivity
+Use to connect a frontend application to your database.
+Follows a seven step process -
+
+1: import packages
+
+2: Load/register the driver
+
+3: Establish connection
+
+4: Create Statement
+
+5: Excecute Statements
+
+6: Process Results
+
+7: Close Connections
+
+Recommended softwares - eclipse/neatbeans + prerequisite knowledge of mysql
