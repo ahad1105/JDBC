@@ -1,0 +1,14 @@
+
+import java.sql.*;  //jdbc connectivity
+
+Public class Democlass
+{
+	public static void main(String args[]) throws Exception   
+	{
+		String url = "";
+		String uname = "";
+		String pass = "";
+		Class.forName("com.mysql.jdbc.Driver");  
+		Connection con = DriverManager.getConnection(url,uname,pass);
+	}
+}
