@@ -1,14 +1,28 @@
-
-import java.sql.*;  //jdbc connectivity
+// creating a statement
+// calling out sql queries
+// excecute and process the results
+//close connections
+import java.sql.*;
 
 Public class Democlass
 {
-	public static void main(String args[]) throws Exception   
+	public static void main(String args[]) throws Exception
 	{
 		String url = "";
 		String uname = "";
 		String pass = "";
-		Class.forName("com.mysql.jdbc.Driver");  
+		String query ="";
+		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url,uname,pass);
+		Statement st = con.createStatement();
+		Result rs = st.excecuteQuery(query);
+		
+		String name = rs.getString("username");
+		System.out.println(name);
+		
+		st.close();
+		con.close();
+		
+		
 	}
 }
