@@ -16,6 +16,7 @@ Public class Democlass
 		Connection con = DriverManager.getConnection(url,uname,pass);
 		Statement st = con.createStatement();
 		Result rs = st.excecuteQuery(query);
+		rs.next();
 		
 		String name = rs.getString("username");
 		System.out.println(name);
