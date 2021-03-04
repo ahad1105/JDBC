@@ -2,21 +2,22 @@
 // calling out sql queries
 // excecute and process the results
 //close connections
-import java.sql.*;
+//connect to mysql workbench
 
+import java.sql.*;
+//jdbc connectivity
 Public class Democlass
 {
 	public static void main(String args[]) throws Exception
 	{
-		String url = "";
-		String uname = "";
+		String url = "jdbc:mysql://localhost:/3306aliens";
+		String uname = "root";
 		String pass = "";
-		String query ="";
+		String query ="select username from students where userid = 3";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url,uname,pass);
 		Statement st = con.createStatement();
 		Result rs = st.excecuteQuery(query);
-		rs.next();
 		
 		String name = rs.getString("username");
 		System.out.println(name);
