@@ -1,5 +1,6 @@
-create database aliens;
-create table students (username varchar(20), college varchar(20));
-insert into students values('harish','pillais'),('parth','djsanghvi');
 select * from students;
-select name from students where college = "djsangvi";
+insert into students values (3,"Mahesh");
+select* from students;
+select username from students where userid = 2;
+select username from students where userid = 3;
+select userid from students where username = "Ahad";
